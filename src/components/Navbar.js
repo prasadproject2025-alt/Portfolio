@@ -5,7 +5,6 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
-import { ImBlog } from "react-icons/im";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -38,9 +37,9 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-  {/* You can adjust the color and size to match your theme */}
-  <strong style={{ color: "#c770f0", fontSize: "1.8rem" }}>DP</strong>
-</Navbar.Brand>
+          {/* You can adjust the color and size to match your theme */}
+          <strong style={{ color: "#c770f0", fontSize: "1.8rem" }}>DP</strong>
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -92,19 +91,21 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
+            {/* Replaced Blogs with Certifications */}
             <Nav.Item>
               <Nav.Link
-                href="https://your-blog-link.com/"
+                href="https://drive.google.com/drive/folders/17gf2IeDvvTmqBbCvf8eksPN6-XyHRm-Q?usp=drive_link"
                 target="_blank"
                 rel="noreferrer"
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blogs
+                <CgFileDocument style={{ marginBottom: "2px" }} /> Certifications
               </Nav.Link>
             </Nav.Item>
 
+            {/* Fixed the syntax error here and pointed it to your GitHub Repo */}
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/prasadproject2025-alt"
+                href="https://github.com/prasadproject2025-alt/Portfolio"
                 target="_blank"
                 className="fork-btn-inner"
               >
