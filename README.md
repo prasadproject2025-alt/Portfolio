@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website<br/>
-  <a href="https://your-portfolio-link.vercel.app/" target="_blank">Your Portfolio Link</a>
+  <a href="https://prasadd-portfolio.vercel.app/" target="_blank">Portfolio Link</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/readme-img1.png" />
@@ -24,10 +24,6 @@
     🔹
     <a href="https://github.com/prasadproject2025-alt/Portfolio/issues">Request Feature</a>
 </h3>
-
-## TL;DR
-
-This is the repository for my personal portfolio. The original template was created by [Soumyajit4419](https://github.com/soumyajit4419/Portfolio) - please give him proper credit if you decide to fork the base template!
 
 ## Built With
 
