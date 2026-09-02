@@ -13,7 +13,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { BsAward, BsJournalBookmark } from "react-icons/bs";
+import { BsAward, BsJournalBookmark, BsShieldCheck } from "react-icons/bs";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -38,7 +38,6 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex">
-          {/* You can adjust the color and size to match your theme */}
           <strong style={{ color: "#c770f0", fontSize: "1.8rem" }}>DP</strong>
         </Navbar.Brand>
         <Navbar.Toggle
@@ -65,7 +64,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> About &amp; Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -88,7 +87,7 @@ function NavBar() {
                 to="/patents"
                 onClick={() => updateExpanded(false)}
               >
-                <BsAward style={{ marginBottom: "2px" }} /> Patents
+                <BsShieldCheck style={{ marginBottom: "2px" }} /> Patents
               </Nav.Link>
             </Nav.Item>
 
@@ -105,6 +104,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/certifications"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsAward style={{ marginBottom: "2px" }} /> Certifications
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -112,18 +121,6 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* Certifications Page Route */}
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/certifications"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Certifications
-              </Nav.Link>
-            </Nav.Item>
-
-            {/* Fixed the syntax error here and pointed it to your GitHub Repo */}
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/prasadproject2025-alt/Portfolio"

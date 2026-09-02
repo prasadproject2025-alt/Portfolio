@@ -1,14 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
     <defs>
-      <linearGradient id="c_bg8" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#140d2b"/>
-        <stop offset="100%" stop-color="#2c1a52"/>
+      <linearGradient id="mlp_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#14092b"/>
+        <stop offset="50%" stop-color="#2d135c"/>
+        <stop offset="100%" stop-color="#0b041a"/>
       </linearGradient>
     </defs>
-    <rect width="400" height="240" rx="12" fill="url(#c_bg8)" stroke="rgba(168,85,247,0.4)" stroke-width="2"/>
-    <circle cx="200" cy="80" r="32" fill="none" stroke="#a855f7" stroke-width="2.5"/>
-    <path d="M180 88 L195 72 L205 82 L220 68" fill="none" stroke="#a855f7" stroke-width="3"/>
-    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">MLOps Infrastructure &amp; Prometheus</text>
-    <text x="200" y="168" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">Prometheus, Grafana, Docker &amp; CI/CD</text>
-    <text x="200" y="200" text-anchor="middle" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: MLOPS-PROM-102</text>
+    <rect width="600" height="380" rx="16" fill="url(#mlp_bg)" stroke="#a855f7" stroke-width="3"/>
+    <rect x="15" y="15" width="570" height="350" rx="10" fill="none" stroke="rgba(168,85,247,0.3)" stroke-width="1.5"/>
+
+    <text x="300" y="55" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3" font-weight="bold">DEVOPS &amp; MLOPS CERTIFICATE</text>
+    <text x="300" y="82" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="21" font-weight="900">MLOPS INFRASTRUCTURE &amp; PROMETHEUS</text>
+
+    <text x="300" y="125" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">Certified MLOps Engineer</text>
+    <text x="300" y="162" text-anchor="middle" fill="#c084fc" font-family="Georgia, serif" font-size="28" font-weight="bold">S DURGA PRASAD</text>
+    <text x="300" y="190" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="14">Prometheus Metrics Exporter (/metrics), Grafana Dashboards &amp; Docker Pipelines</text>
+
+    <text x="80" y="320" fill="#94a3b8" font-size="11">ISSUER: Linux Foundation &amp; Prometheus</text>
+    <text x="520" y="320" text-anchor="end" fill="#a855f7" font-family="monospace" font-size="12" font-weight="bold">ID: MLOPS-PROM-102</text>
   </svg>

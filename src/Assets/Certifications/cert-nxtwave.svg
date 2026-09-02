@@ -1,18 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
     <defs>
-      <linearGradient id="c_bg1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0f172a"/>
-        <stop offset="100%" stop-color="#1e1b4b"/>
+      <linearGradient id="nxt_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0b0f19"/>
+        <stop offset="50%" stop-color="#151c2e"/>
+        <stop offset="100%" stop-color="#090c14"/>
       </linearGradient>
-      <linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#fbbf24"/>
-        <stop offset="100%" stop-color="#f59e0b"/>
+      <linearGradient id="gold_grad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fef08a"/>
+        <stop offset="50%" stop-color="#eab308"/>
+        <stop offset="100%" stop-color="#ca8a04"/>
       </linearGradient>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="6" result="blur"/>
+        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+      </filter>
     </defs>
-    <rect width="400" height="240" rx="12" fill="url(#c_bg1)" stroke="rgba(251,191,36,0.4)" stroke-width="2"/>
-    <circle cx="200" cy="80" r="32" fill="none" stroke="url(#gold1)" stroke-width="2.5"/>
-    <path d="M190 80 L197 87 L212 72" fill="none" stroke="#fbbf24" stroke-width="3"/>
-    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">NxtWave CCBP 4.0 Academy</text>
-    <text x="200" y="168" text-anchor="middle" fill="#c770f0" font-family="system-ui, sans-serif" font-size="13">Industry Ready Software Engineer</text>
-    <text x="200" y="200" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: NXT-CCBP-2025-DP41</text>
+    
+    <!-- Background Frame -->
+    <rect width="600" height="380" rx="16" fill="url(#nxt_bg)" stroke="url(#gold_grad)" stroke-width="3"/>
+    <rect x="15" y="15" width="570" height="350" rx="10" fill="none" stroke="rgba(234,179,8,0.3)" stroke-width="1.5" stroke-dasharray="8 4"/>
+    
+    <!-- Corner Decorative Accents -->
+    <path d="M 25 45 L 45 25 L 75 25 M 25 45 L 25 75" stroke="#eab308" stroke-width="2" fill="none"/>
+    <path d="M 575 45 L 555 25 L 525 25 M 575 45 L 575 75" stroke="#eab308" stroke-width="2" fill="none"/>
+    <path d="M 25 335 L 45 355 L 75 355 M 25 335 L 25 305" stroke="#eab308" stroke-width="2" fill="none"/>
+    <path d="M 575 335 L 555 355 L 525 355 M 575 335 L 575 305" stroke="#eab308" stroke-width="2" fill="none"/>
+
+    <!-- Header & Issuer Logo -->
+    <text x="300" y="55" text-anchor="middle" fill="#eab308" font-family="Georgia, serif" font-size="14" letter-spacing="3" font-weight="bold">CERTIFICATE OF COMPLETION</text>
+    <text x="300" y="80" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="900" letter-spacing="1">NXTWAVE CCBP 4.0 ACADEMY</text>
+    
+    <!-- Ribbon Divider -->
+    <line x1="180" y1="95" x2="420" y2="95" stroke="url(#gold_grad)" stroke-width="2"/>
+    <circle cx="300" cy="95" r="4" fill="#eab308"/>
+
+    <!-- Candidate Section -->
+    <text x="300" y="125" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13">This is to certify that</text>
+    <text x="300" y="160" text-anchor="middle" fill="#c770f0" font-family="Georgia, serif" font-size="28" font-weight="bold" filter="url(#glow)">S DURGA PRASAD</text>
+    <text x="300" y="188" text-anchor="middle" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="14">has successfully mastered the Industry Ready Software Engineering Program</text>
+    <text x="300" y="210" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="bold">Full Stack Web Development • Data Structures &amp; Algorithms • SQL &amp; System Design</text>
+
+    <!-- Official Gold Seal Emblem -->
+    <g transform="translate(300, 280)">
+      <circle cx="0" cy="0" r="34" fill="url(#gold_grad)" filter="url(#glow)"/>
+      <circle cx="0" cy="0" r="28" fill="#0b0f19" stroke="#fef08a" stroke-width="1.5"/>
+      <path d="M-10 -5 L-2 4 L12 -10" stroke="#eab308" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <text x="0" y="15" text-anchor="middle" fill="#eab308" font-family="system-ui, sans-serif" font-size="7" font-weight="bold">VERIFIED</text>
+    </g>
+
+    <!-- Signatures & Details -->
+    <text x="80" y="300" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">CREDENTIAL ID</text>
+    <text x="80" y="318" fill="#eab308" font-family="monospace" font-size="12" font-weight="bold">NXT-CCBP-2025-DP41</text>
+
+    <text x="520" y="300" text-anchor="end" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">VALIDATION REGISTRY</text>
+    <text x="520" y="318" text-anchor="end" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold">AUTHENTICATED ON-CHAIN</text>
+
+    <text x="300" y="350" text-anchor="middle" fill="#64748b" font-family="system-ui, sans-serif" font-size="10">Verify online at https://nxtwave.tech/credentials</text>
   </svg>

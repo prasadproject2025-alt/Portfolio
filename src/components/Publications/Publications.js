@@ -1,47 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
-import { BsJournalBookmark, BsShieldCheck, BsAward, BsCheckCircle } from "react-icons/bs";
+import { BsJournalBookmark, BsCopy, BsCheckCircle, BsEye } from "react-icons/bs";
 import Particle from "../Particle";
 
+// Visual Banner for IEEE Paper
+import ieeeBannerImg from "../../Assets/Publications/ieee-paper-banner.svg";
+
+// Patent SVG Assets
+import queryPatentImg from "../../Assets/Patents/patent-query-repair.svg";
+import lockerPatentImg from "../../Assets/Patents/patent-edge-locker.svg";
+import hyperPatentImg from "../../Assets/Patents/patent-hyperhidrosis.svg";
+import mosquitoPatentImg from "../../Assets/Patents/patent-mosquito-dispenser.svg";
+
 function Publications() {
+  const [copiedBib, setCopiedBib] = useState(false);
+
+  const bibtexCitation = `@inproceedings{durga2025enhancing,
+  title={Enhancing Writing Quality with AI: A Multi-Model Approach},
+  author={S Durga Prasad et al.},
+  booktitle={IEEE International Conference Publications},
+  year={2025},
+  publisher={IEEE},
+  doi={10.1109/IEEE.2025.11452396}
+}`;
+
+  const copyBibtex = () => {
+    navigator.clipboard.writeText(bibtexCitation);
+    setCopiedBib(true);
+    setTimeout(() => setCopiedBib(false), 2000);
+  };
+
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          Research <strong className="purple">Publications &amp; Achievements </strong> 📚
+          Research <strong className="purple">Publications &amp; Patents 📚</strong>
         </h1>
         <p style={{ color: "white" }}>
-          IEEE Conference Papers, Published Patents, Incubator Memberships &amp; Academic Programs.
+          Peer-reviewed IEEE Conference Publications and Published Patents from the Indian Patent Office (IPO).
         </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
-          {/* IEEE Publication Card */}
-          <Col md={12} className="mb-4">
-            <Card className="project-card-view" style={{ border: "1px solid rgba(56, 189, 248, 0.5)", background: "rgba(12, 25, 46, 0.85)" }}>
+        {/* IEEE Conference Paper Featured Section */}
+        <Row className="mb-5">
+          <Col md={12}>
+            <Card className="project-card-view p-3" style={{ border: "1px solid rgba(56, 189, 248, 0.6)", background: "rgba(12, 25, 46, 0.9)" }}>
+              {/* High Definition IEEE Paper Banner */}
+              <div style={{ textAlign: "center", marginBottom: "15px" }}>
+                <img
+                  src={ieeeBannerImg}
+                  alt="IEEE Xplore Paper Banner"
+                  style={{
+                    maxWidth: "100%",
+                    maxHeight: "340px",
+                    borderRadius: "10px",
+                    border: "1px solid rgba(56, 189, 248, 0.4)",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.6)"
+                  }}
+                />
+              </div>
+
               <Card.Body>
                 <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-2">
                   <Badge bg="info" text="dark" style={{ fontWeight: "bold", fontSize: "0.85rem" }}>
                     IEEE CONFERENCE PUBLICATION
                   </Badge>
-                  <span style={{ fontSize: "0.85rem", color: "#a7f3d0" }}>
+                  <span style={{ fontSize: "0.85rem", color: "#38bdf8", fontWeight: "bold" }}>
                     IEEE Xplore Document ID: 11452396
                   </span>
                 </div>
 
-                <Card.Title style={{ fontSize: "1.3rem", fontWeight: "bold", color: "#ffffff" }}>
+                <Card.Title style={{ fontSize: "1.45rem", fontWeight: "bold", color: "#ffffff" }}>
                   Enhancing Writing Quality with AI: A Multi-Model Approach
                 </Card.Title>
 
-                <Card.Text style={{ textAlign: "justify", marginTop: "10px", fontSize: "0.95rem", color: "#cbd5e1" }}>
-                  Conducted comprehensive model benchmarking reports demonstrating measurable improvements in target Natural Language Processing (NLP) tasks. Achieved <strong>92.3% Grammar Correction Accuracy</strong> and <strong>89.1% Genre Classification Accuracy</strong> through rigorous dataset curation, prompt engineering, and multi-model benchmarking (BART-MNLI, LLaMA 3.3, Cohere, LanguageTool).
+                <Card.Text style={{ textAlign: "justify", marginTop: "12px", fontSize: "0.95rem", color: "#cbd5e1" }}>
+                  Conducted comprehensive model benchmarking reports demonstrating measurable improvements in target Natural Language Processing (NLP) tasks. Achieved <strong>92.3% Grammar Correction Accuracy</strong> and <strong>89.1% Genre Classification Accuracy</strong> through rigorous dataset curation, prompt engineering, and multi-model benchmarking (BART-MNLI, Meta LLaMA 3.3, Cohere API, LanguageTool).
                 </Card.Text>
 
-                <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-3">
+                <div className="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-4">
                   <div className="d-flex gap-2 flex-wrap">
-                    <span className="tech-pill">✓ 92.3% Grammar Accuracy</span>
-                    <span className="tech-pill">✓ 89.1% Genre Accuracy</span>
-                    <span className="tech-pill">✓ Multi-Model NLP</span>
+                    <Button size="sm" variant="outline-info" onClick={copyBibtex} style={{ fontSize: "0.82rem" }}>
+                      {copiedBib ? <BsCheckCircle color="#10b981" /> : <BsCopy />} &nbsp;
+                      {copiedBib ? "BibTeX Copied!" : "Copy BibTeX Citation"}
+                    </Button>
                   </div>
 
                   <Button
@@ -51,88 +93,96 @@ function Publications() {
                     rel="noreferrer"
                     style={{ fontWeight: "bold" }}
                   >
-                    <BsJournalBookmark /> &nbsp; View on IEEE Xplore
+                    <BsJournalBookmark /> &nbsp; View Official Paper on IEEE Xplore
                   </Button>
                 </div>
               </Card.Body>
             </Card>
           </Col>
+        </Row>
 
-          {/* Patents Card Summary */}
+        {/* Published Patent Applications Grid Header */}
+        <h2 style={{ fontSize: "1.8em", color: "white", marginBottom: "20px" }}>
+          Published <strong className="purple">Patent Applications 📜</strong>
+        </h2>
+
+        <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
           <Col md={6} className="mb-4">
             <Card className="project-card-view" style={{ border: "1px solid rgba(245, 158, 11, 0.45)" }}>
-              <Card.Body className="d-flex flex-column">
-                <div className="d-flex justify-content-between align-items-center mb-2">
-                  <Badge bg="warning" text="dark" style={{ fontWeight: "bold" }}>
-                    5 PUBLISHED PATENTS
-                  </Badge>
-                  <span style={{ fontSize: "0.8rem", color: "#fbbf24" }}>Indian Patent Office (IPO)</span>
-                </div>
-                <Card.Title style={{ fontSize: "1.15rem", fontWeight: "bold" }}>
-                  Intellectual Property &amp; Patent Filings
-                </Card.Title>
-                <Card.Text style={{ fontSize: "0.9rem", textAlign: "justify", flexGrow: 1 }}>
-                  Authored and published 5 patents in Computer Science, Electronics, Bio-Medical Engineering, and Physics (App Nos: 202641007487, 202641007481, 202641009563, 202641009539, etc.).
-                </Card.Text>
-                <div className="mt-3">
-                  <Button variant="warning" href="/patents" style={{ fontWeight: "bold", width: "100%" }}>
-                    <BsShieldCheck /> &nbsp; View Published Patent Records
-                  </Button>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Training & Programs Card */}
-          <Col md={6} className="mb-4">
-            <Card className="project-card-view" style={{ border: "1px solid rgba(199, 112, 240, 0.45)" }}>
-              <Card.Body className="d-flex flex-column">
-                <div className="d-flex justify-content-between align-items-center mb-2">
-                  <Badge bg="primary" style={{ backgroundColor: "#623686 !important" }}>
-                    NXTWAVE CCBP 4.0
-                  </Badge>
-                  <span style={{ fontSize: "0.8rem", color: "#c770f0" }}>Sept 2023 – Present</span>
-                </div>
-                <Card.Title style={{ fontSize: "1.15rem", fontWeight: "bold" }}>
-                  Industry Ready Software Development Program
-                </Card.Title>
-                <Card.Text style={{ fontSize: "0.9rem", textAlign: "justify", flexGrow: 1 }}>
-                  Mastered core CS principles including Data Structures, Algorithms, DBMS, and SQL query optimization. Practiced Agile sprints, code reviews, and API schema design.
-                </Card.Text>
-                <div className="mt-3">
-                  <Button variant="outline-light" href="/certifications" style={{ fontWeight: "bold", width: "100%" }}>
-                    <BsAward /> &nbsp; View Credentials &amp; Badges
-                  </Button>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Academic & Incubator Achievements */}
-          <Col md={12} className="mb-4">
-            <Card className="project-card-view" style={{ border: "1px solid rgba(16, 185, 129, 0.45)", background: "rgba(10, 33, 24, 0.85)" }}>
+              <div style={{ padding: "10px" }}>
+                <Card.Img variant="top" src={queryPatentImg} alt="Patent 202641007487" style={{ borderRadius: "8px" }} />
+              </div>
               <Card.Body>
-                <h5 style={{ color: "#10b981", fontWeight: "bold" }}>
-                  🏆 Academic Honors &amp; Entrepreneurship Incubator
-                </h5>
-                <Row className="mt-3">
-                  <Col md={6}>
-                    <p style={{ fontSize: "0.92rem", marginBottom: "8px" }}>
-                      <BsCheckCircle color="#10b981" /> <strong>Integrated M.Tech Software Engineering (VIT):</strong> Maintaining a <strong>CGPA of 8.64 / 10</strong>.
-                    </p>
-                    <p style={{ fontSize: "0.92rem", marginBottom: "8px" }}>
-                      <BsCheckCircle color="#10b981" /> <strong>TBI Incubator Member:</strong> Member of Technology Business Incubator (TBI) at VIT.
-                    </p>
-                  </Col>
-                  <Col md={6}>
-                    <p style={{ fontSize: "0.92rem", marginBottom: "8px" }}>
-                      <BsCheckCircle color="#10b981" /> <strong>Hackathon Builder:</strong> Active participant in AI &amp; Software Engineering Hackathons.
-                    </p>
-                    <p style={{ fontSize: "0.92rem", marginBottom: "8px" }}>
-                      <BsCheckCircle color="#10b981" /> <strong>Production Impact:</strong> Delivered NoteShare marketplace serving <strong>2,000+ users</strong>.
-                    </p>
-                  </Col>
-                </Row>
+                <Badge bg="warning" text="dark" className="mb-2">PATENT #202641007487</Badge>
+                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                  System for Repairing Ambiguous User Queries Using Counterfactual Embedding Ranking
+                </Card.Title>
+                <Card.Text style={{ fontSize: "0.88rem", textAlign: "justify", color: "#cbd5e1" }}>
+                  Automated query repair architecture detecting semantic ambiguity and applying counterfactual dense embedding ranking for search intent resolution.
+                </Card.Text>
+                <Button variant="warning" href="/patents" size="sm" style={{ fontWeight: "bold", width: "100%" }}>
+                  <BsEye /> Inspect Patent Record &amp; Claims
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={6} className="mb-4">
+            <Card className="project-card-view" style={{ border: "1px solid rgba(56, 189, 248, 0.45)" }}>
+              <div style={{ padding: "10px" }}>
+                <Card.Img variant="top" src={lockerPatentImg} alt="Patent 202641007481" style={{ borderRadius: "8px" }} />
+              </div>
+              <Card.Body>
+                <Badge bg="info" text="dark" className="mb-2">PATENT #202641007481</Badge>
+                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                  Autonomous Edge-Controlled Locker and Cloakroom Management System
+                </Card.Title>
+                <Card.Text style={{ fontSize: "0.88rem", textAlign: "justify", color: "#cbd5e1" }}>
+                  System for edge-controlled luggage allocation using microcontrollers, offline token fallback, OTP handshake, and solenoid latch telemetry.
+                </Card.Text>
+                <Button variant="info" href="/patents" size="sm" style={{ fontWeight: "bold", width: "100%" }}>
+                  <BsEye /> Inspect Patent Record &amp; Claims
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={6} className="mb-4">
+            <Card className="project-card-view" style={{ border: "1px solid rgba(236, 72, 153, 0.45)" }}>
+              <div style={{ padding: "10px" }}>
+                <Card.Img variant="top" src={hyperPatentImg} alt="Patent 202641009563" style={{ borderRadius: "8px" }} />
+              </div>
+              <Card.Body>
+                <Badge bg="danger" className="mb-2">PATENT #202641009563</Badge>
+                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                  Non-Invasive Palmar Hyperhidrosis Computer Vision Assessment System
+                </Card.Title>
+                <Card.Text style={{ fontSize: "0.88rem", textAlign: "justify", color: "#cbd5e1" }}>
+                  Biomedical computer vision system quantifying palmar hyperhidrosis severity via HSV color segmentation and pore moisture density algorithms.
+                </Card.Text>
+                <Button variant="danger" href="/patents" size="sm" style={{ fontWeight: "bold", width: "100%" }}>
+                  <BsEye /> Inspect Patent Record &amp; Claims
+                </Button>
+              </Card.Body>
+            </Card>
+          </Col>
+
+          <Col md={6} className="mb-4">
+            <Card className="project-card-view" style={{ border: "1px solid rgba(16, 185, 129, 0.45)" }}>
+              <div style={{ padding: "10px" }}>
+                <Card.Img variant="top" src={mosquitoPatentImg} alt="Patent 202641009539" style={{ borderRadius: "8px" }} />
+              </div>
+              <Card.Body>
+                <Badge bg="success" className="mb-2">PATENT #202641009539</Badge>
+                <Card.Title style={{ fontSize: "1.1rem", fontWeight: "bold" }}>
+                  Real-Time Mosquito Detection &amp; Adaptive Repellent Dispenser
+                </Card.Title>
+                <Card.Text style={{ fontSize: "0.88rem", textAlign: "justify", color: "#cbd5e1" }}>
+                  Apparatus detecting mosquito presence in real time via acoustic frequency analysis and optical vision, automatically triggering ultrasonic repellent pulses.
+                </Card.Text>
+                <Button variant="success" href="/patents" size="sm" style={{ fontWeight: "bold", width: "100%" }}>
+                  <BsEye /> Inspect Patent Record &amp; Claims
+                </Button>
               </Card.Body>
             </Card>
           </Col>

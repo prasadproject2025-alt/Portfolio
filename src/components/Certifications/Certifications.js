@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
-import { BsEye } from "react-icons/bs";
+import { BsEye, BsCheckCircle, BsCopy } from "react-icons/bs";
 import Particle from "../Particle";
 import CertificationsModal from "./CertificationsModal";
 
-// SVG Certificate Banners
+// High Definition Certificate Visual Assets
 import certNxtWaveImg from "../../Assets/Certifications/cert-nxtwave.svg";
 import certDeepLearningImg from "../../Assets/Certifications/cert-deeplearning.svg";
 import certGenAiImg from "../../Assets/Certifications/cert-genai.svg";
@@ -19,7 +19,7 @@ export const certificationsData = [
     id: "cert-nxtwave",
     title: "NxtWave CCBP 4.0 Industry Ready Software Engineer",
     issuer: "NxtWave CCBP 4.0 Academy",
-    category: "Full Stack Software Engineering",
+    category: "Full Stack",
     issueDate: "2025",
     credentialId: "NXT-CCBP-2025-DP41",
     imgPath: certNxtWaveImg,
@@ -30,7 +30,7 @@ export const certificationsData = [
     id: "cert-deeplearning",
     title: "Deep Learning & Computer Vision Specialization",
     issuer: "DeepLearning.AI / Kaggle",
-    category: "Artificial Intelligence",
+    category: "AI & ML",
     issueDate: "2025",
     credentialId: "DL-CV-849201",
     imgPath: certDeepLearningImg,
@@ -41,7 +41,7 @@ export const certificationsData = [
     id: "cert-genai",
     title: "Generative AI & Large Language Models (LLM) Engineering",
     issuer: "Hugging Face / DeepLearning.AI",
-    category: "Generative AI & NLP",
+    category: "AI & ML",
     issueDate: "2025",
     credentialId: "GENAI-LLM-991204",
     imgPath: certGenAiImg,
@@ -52,7 +52,7 @@ export const certificationsData = [
     id: "cert-aws",
     title: "AWS Certified Cloud Foundations & Deployment",
     issuer: "Amazon Web Services (AWS)",
-    category: "Cloud Computing",
+    category: "Full Stack",
     issueDate: "2025",
     credentialId: "AWS-CP-2025-DP",
     imgPath: certAwsImg,
@@ -63,7 +63,7 @@ export const certificationsData = [
     id: "cert-iot",
     title: "IoT & Embedded Hardware Security Certification",
     issuer: "Vellore Institute of Technology (VIT)",
-    category: "IoT & Embedded Systems",
+    category: "Security & IoT",
     issueDate: "2024",
     credentialId: "VIT-IOT-SEC-401",
     imgPath: certIotImg,
@@ -74,7 +74,7 @@ export const certificationsData = [
     id: "cert-sql",
     title: "PostgreSQL & Database Architecture Certification",
     issuer: "HackerRank / Oracle",
-    category: "Database Systems",
+    category: "Full Stack",
     issueDate: "2024",
     credentialId: "SQL-DB-782109",
     imgPath: certSqlImg,
@@ -85,7 +85,7 @@ export const certificationsData = [
     id: "cert-cybersec",
     title: "Cybersecurity & Cryptography Certification (AES & RSA)",
     issuer: "IEEE Security / Cybrary",
-    category: "Information Security",
+    category: "Security & IoT",
     issueDate: "2025",
     credentialId: "CYBER-SEC-3321",
     imgPath: certCyberSecImg,
@@ -96,7 +96,7 @@ export const certificationsData = [
     id: "cert-mlops",
     title: "MLOps Infrastructure & Prometheus Observability",
     issuer: "Linux Foundation / Prometheus",
-    category: "DevOps & MLOps",
+    category: "Full Stack",
     issueDate: "2025",
     credentialId: "MLOPS-PROM-102",
     imgPath: certMlopsImg,
@@ -107,57 +107,111 @@ export const certificationsData = [
 
 function Certifications() {
   const [selectedCert, setSelectedCert] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("All");
+  const [copiedId, setCopiedId] = useState(null);
+
+  const categories = ["All", "Full Stack", "AI & ML", "Security & IoT"];
+
+  const filteredCerts = activeCategory === "All"
+    ? certificationsData
+    : certificationsData.filter(c => c.category === activeCategory);
+
+  const handleCopy = (id) => {
+    navigator.clipboard.writeText(id);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          Verified <strong className="purple">Certifications </strong> 🏆
+          Verified <strong className="purple">Certifications &amp; Accreditations 🏆</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Industry certifications, specialized accreditations, and technical domain credentials.
+          Official credentials, industry accreditations, and technical competency certificates.
         </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {certificationsData.map((cert) => (
-            <Col key={cert.id} md={6} lg={4} className="project-card">
-              <Card className="project-card-view" style={{ border: "1px solid rgba(199, 112, 240, 0.35)" }}>
-                <div style={{ cursor: "pointer" }} onClick={() => setSelectedCert(cert)}>
-                  <Card.Img variant="top" src={cert.imgPath} alt={cert.title} />
+        {/* Filter Category Tabs */}
+        <div className="d-flex justify-content-center gap-2 flex-wrap mb-4">
+          {categories.map((cat) => (
+            <Button
+              key={cat}
+              variant={activeCategory === cat ? "primary" : "outline-secondary"}
+              onClick={() => setActiveCategory(cat)}
+              style={{ fontWeight: "bold", borderRadius: "20px", padding: "6px 18px" }}
+            >
+              {cat === "All" ? "All Credentials" : cat}
+            </Button>
+          ))}
+        </div>
+
+        <Row style={{ justifyContent: "center", paddingBottom: "20px" }}>
+          {filteredCerts.map((cert) => (
+            <Col key={cert.id} md={6} className="project-card">
+              <Card className="project-card-view" style={{ border: "1px solid rgba(199, 112, 240, 0.45)", background: "rgba(22, 16, 42, 0.85)" }}>
+                {/* High Definition Certificate Image Preview */}
+                <div style={{ padding: "12px", cursor: "pointer", overflow: "hidden" }} onClick={() => setSelectedCert(cert)}>
+                  <Card.Img
+                    variant="top"
+                    src={cert.imgPath}
+                    alt={cert.title}
+                    style={{
+                      borderRadius: "8px",
+                      border: "1px solid rgba(199, 112, 240, 0.3)",
+                      transition: "transform 0.4s ease",
+                      boxShadow: "0 6px 18px rgba(0,0,0,0.5)"
+                    }}
+                  />
                 </div>
+
                 <Card.Body className="d-flex flex-column">
-                  <div className="mb-2 d-flex flex-wrap gap-2">
-                    <Badge bg="primary" style={{ backgroundColor: "#623686 !important" }}>
+                  <div className="mb-2 d-flex flex-wrap align-items-center justify-content-between gap-2">
+                    <Badge bg="primary" style={{ backgroundColor: "#623686 !important", fontWeight: "bold" }}>
                       {cert.issuer}
                     </Badge>
-                    <Badge bg="dark" style={{ border: "1px solid rgba(199, 112, 240, 0.4)", color: "#c770f0" }}>
+                    <Badge bg="dark" style={{ border: "1px solid rgba(199, 112, 240, 0.5)", color: "#c770f0", fontSize: "0.8rem" }}>
                       ID: {cert.credentialId}
                     </Badge>
                   </div>
 
                   <Card.Title
-                    style={{ cursor: "pointer", fontSize: "1.05rem", fontWeight: "bold" }}
+                    style={{ cursor: "pointer", fontSize: "1.15rem", fontWeight: "bold", color: "#ffffff" }}
                     onClick={() => setSelectedCert(cert)}
                   >
                     {cert.title}
                   </Card.Title>
 
-                  <Card.Text style={{ textAlign: "justify", flexGrow: 1, fontSize: "0.88rem" }}>
+                  <Card.Text style={{ textAlign: "justify", flexGrow: 1, fontSize: "0.9rem", color: "#cbd5e1" }}>
                     {cert.description}
                   </Card.Text>
 
+                  <div className="mb-3">
+                    {cert.skills.slice(0, 4).map((skill, idx) => (
+                      <span key={idx} className="tech-pill">
+                        ✓ {skill}
+                      </span>
+                    ))}
+                  </div>
+
                   <div style={{ marginTop: "auto", paddingTop: "12px", borderTop: "1px solid rgba(199, 112, 240, 0.2)" }} className="d-flex justify-content-between align-items-center flex-wrap gap-2">
-                    <span style={{ fontSize: "0.8rem", color: "#a8a29e" }}>
-                      Issued: {cert.issueDate}
-                    </span>
+                    <Button
+                      size="sm"
+                      variant="outline-light"
+                      onClick={() => handleCopy(cert.credentialId)}
+                      style={{ fontSize: "0.8rem" }}
+                    >
+                      {copiedId === cert.credentialId ? <BsCheckCircle color="#10b981" /> : <BsCopy />} &nbsp;
+                      {copiedId === cert.credentialId ? "ID Copied!" : "Copy Credential ID"}
+                    </Button>
 
                     <Button
                       variant="primary"
                       onClick={() => setSelectedCert(cert)}
                       style={{ fontWeight: "bold", backgroundColor: "#623686", borderColor: "#623686" }}
                     >
-                      <BsEye /> &nbsp; Inspect Credential
+                      <BsEye /> &nbsp; Inspect Certificate
                     </Button>
                   </div>
                 </Card.Body>
