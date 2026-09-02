@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_pdf" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1f1124"/>
+        <stop offset="100%" stop-color="#3d1847"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_pdf)" stroke="rgba(199,112,240,0.3)" stroke-width="2"/>
+    <!-- PDF Document + OCR scanner -->
+    <rect x="165" y="55" width="70" height="90" rx="6" fill="#2d1538" stroke="#ff477e" stroke-width="2"/>
+    <text x="200" y="90" text-anchor="middle" fill="#ff477e" font-family="sans-serif" font-weight="bold" font-size="14">PDF</text>
+    <line x1="175" y1="110" x2="225" y2="110" stroke="#c770f0" stroke-width="2"/>
+    <line x1="175" y1="125" x2="215" y2="125" stroke="#c770f0" stroke-width="2"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">AutoRename-PDF (AI OCR)</text>
+    <text x="200" y="215" text-anchor="middle" fill="#ff477e" font-family="system-ui, sans-serif" font-size="12">Document Extraction &amp; Standardized Archival</text>
+  </svg>

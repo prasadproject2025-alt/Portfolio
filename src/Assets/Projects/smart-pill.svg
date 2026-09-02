@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_sp" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1c1033"/>
+        <stop offset="100%" stop-color="#381552"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_sp)" stroke="rgba(199,112,240,0.3)" stroke-width="2"/>
+    <!-- Pill & RFID waves -->
+    <rect x="175" y="70" width="50" height="25" rx="12.5" fill="#ef476f" transform="rotate(-30 200 82)"/>
+    <rect x="175" y="70" width="25" height="25" rx="12.5" fill="#ffd166" transform="rotate(-30 200 82)"/>
+    <circle cx="200" cy="120" r="16" fill="none" stroke="#c770f0" stroke-width="2"/>
+    <path d="M190 140 C190 130 210 130 210 140" fill="none" stroke="#c770f0" stroke-width="2"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Smart Pill Dispense System</text>
+    <text x="200" y="215" text-anchor="middle" fill="#ef476f" font-family="system-ui, sans-serif" font-size="12">ESP32 • RFID • Facial Biometric Verification</text>
+  </svg>

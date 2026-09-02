@@ -13,6 +13,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { BsAward, BsJournalBookmark } from "react-icons/bs";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -84,6 +85,26 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/patents"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsAward style={{ marginBottom: "2px" }} /> Patents
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/publications"
+                onClick={() => updateExpanded(false)}
+              >
+                <BsJournalBookmark style={{ marginBottom: "2px" }} /> Publications
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/resume"
                 onClick={() => updateExpanded(false)}
               >
@@ -91,12 +112,12 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* Replaced Blogs with Certifications */}
+            {/* Certifications Page Route */}
             <Nav.Item>
               <Nav.Link
-                href="https://drive.google.com/drive/folders/17gf2IeDvvTmqBbCvf8eksPN6-XyHRm-Q?usp=drive_link"
-                target="_blank"
-                rel="noreferrer"
+                as={Link}
+                to="/certifications"
+                onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Certifications
               </Nav.Link>

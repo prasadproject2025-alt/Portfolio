@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="c_bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#19092b"/>
+        <stop offset="100%" stop-color="#3b1154"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#c_bg2)" stroke="rgba(199,112,240,0.4)" stroke-width="2"/>
+    <circle cx="200" cy="80" r="32" fill="none" stroke="#c770f0" stroke-width="2.5"/>
+    <polygon points="200,60 215,95 185,95" fill="#c770f0"/>
+    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">Deep Learning &amp; Computer Vision</text>
+    <text x="200" y="168" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13">CNN, PyTorch, YOLO &amp; Depth Estimation</text>
+    <text x="200" y="200" text-anchor="middle" fill="#c770f0" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: DL-CV-849201</text>
+  </svg>

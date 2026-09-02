@@ -11,30 +11,32 @@ function AboutCard() {
             Hi everyone! I’m <span className="purple">S Durga Prasad</span>{" "}
             from <span className="purple">Vellore, India</span>.
             <br />
-            I am currently a <span className="purple">Software Engineering student</span>{" "}
-            training in the <span className="purple">NxtWave CCBP 4.0 Industry Ready Software Development Program</span>.
-            <br />I am pursuing my <span className="purple">M.Tech (Integrated) Software Engineering</span>{" "}
-            at the <span className="purple">Vellore Institute of Technology</span>.
+            I am pursuing my <span className="purple">Integrated M.Tech in Software Engineering</span>{" "}
+            at <span className="purple">Vellore Institute of Technology (VIT)</span> with a CGPA of <span className="purple">8.64 / 10</span> (Expected Graduation: 2027).
+            <br />
+            I am also actively training in the <span className="purple">NxtWave CCBP 4.0 Industry Ready Software Development Program</span> and a member of the <span className="purple">TBI Technology Business Incubator</span> at VIT.
             <br />
             <br />
-            Outside of my core academic curriculum, I love engaging in activities that keep me
-            creative and inspired:
+            Key highlights of my background and academic achievements include:
           </p>
 
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Developing scalable full-stack web applications 💻
+              <ImPointRight /> Published IEEE Research Paper: <i>"Enhancing Writing Quality with AI: A Multi-Model Approach"</i> (92.3% Grammar &amp; 89.1% Genre Accuracy).
             </li>
             <li className="about-activity">
-              <ImPointRight /> Building robust AI and ML proofs-of-concept 🤖
+              <ImPointRight /> Published 5 Patents granted/published by the Indian Patent Office (IPO).
             </li>
             <li className="about-activity">
-              <ImPointRight /> Practicing clean coding and collaborative debugging 🛠️
+              <ImPointRight /> Built &amp; deployed <b>NoteShare</b> academic marketplace serving <b>2,000+ users</b> in the MIS department.
+            </li>
+            <li className="about-activity">
+              <ImPointRight /> Member of TBI (Technology Business Incubator) at VIT &amp; active hackathon builder.
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          <p style={{ color: "rgb(155 126 172)", marginTop: "15px" }}>
+            "Strive to build scalable systems that solve real-world challenges!"{" "}
           </p>
           <footer className="blockquote-footer">Durga Prasad</footer>
         </blockquote>

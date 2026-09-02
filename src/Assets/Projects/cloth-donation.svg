@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_cd" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a"/>
+        <stop offset="100%" stop-color="#1e293b"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_cd)" stroke="rgba(56,189,248,0.3)" stroke-width="2"/>
+    <!-- Heart & NGO donation hand -->
+    <path d="M200 70 C180 50 150 65 165 95 L200 130 L235 95 C250 65 220 50 200 70 Z" fill="#ef476f" fill-opacity="0.85" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Sevaarth NGO Donation App</text>
+    <text x="200" y="215" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12">Android Java • Firebase • Cloudinary • Maps API</text>
+  </svg>

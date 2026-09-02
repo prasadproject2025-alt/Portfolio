@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_ir" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0a192f"/>
+        <stop offset="100%" stop-color="#172a45"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_ir)" stroke="rgba(199,112,240,0.3)" stroke-width="2"/>
+    <!-- Isometric boxes / warehouse grid -->
+    <polygon points="200,60 235,78 200,96 165,78" fill="#64ffda" fill-opacity="0.8"/>
+    <polygon points="165,78 200,96 200,135 165,117" fill="#48cae4" fill-opacity="0.8"/>
+    <polygon points="200,96 235,78 235,117 200,135" fill="#0077b6" fill-opacity="0.8"/>
+    <rect x="140" y="145" width="120" height="8" rx="4" fill="#64ffda" opacity="0.4"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Allo Inventory Reservation</text>
+    <text x="200" y="215" text-anchor="middle" fill="#64ffda" font-family="system-ui, sans-serif" font-size="12">TypeScript • Stock Allocation • Real-time Sync</text>
+  </svg>

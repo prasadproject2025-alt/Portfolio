@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="c_bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c192e"/>
+        <stop offset="100%" stop-color="#183661"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#c_bg6)" stroke="rgba(56,189,248,0.4)" stroke-width="2"/>
+    <circle cx="200" cy="80" r="32" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+    <ellipse cx="200" cy="72" rx="16" ry="6" fill="#38bdf8"/>
+    <ellipse cx="200" cy="82" rx="16" ry="6" fill="#0284c7"/>
+    <ellipse cx="200" cy="92" rx="16" ry="6" fill="#0369a1"/>
+    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">PostgreSQL &amp; Database Architecture</text>
+    <text x="200" y="168" text-anchor="middle" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13">Relational Design, Optimization &amp; Transactions</text>
+    <text x="200" y="200" text-anchor="middle" fill="#7dd3fc" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: SQL-DB-782109</text>
+  </svg>

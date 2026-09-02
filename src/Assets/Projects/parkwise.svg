@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_pw" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#140d2b"/>
+        <stop offset="100%" stop-color="#2c1a52"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_pw)" stroke="rgba(168,85,247,0.3)" stroke-width="2"/>
+    <!-- Parking P & Firefly algorithm glow -->
+    <rect x="170" y="55" width="60" height="85" rx="8" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+    <text x="200" y="115" text-anchor="middle" fill="#a855f7" font-family="system-ui, sans-serif" font-weight="bold" font-size="42">P</text>
+    <circle cx="240" cy="65" r="5" fill="#fbbf24"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">ParkWise Smart Parking Platform</text>
+    <text x="200" y="215" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12">React • Express (9090) • Firefly Alg • 2FA OTP</text>
+  </svg>

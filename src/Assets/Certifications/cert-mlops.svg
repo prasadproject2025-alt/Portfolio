@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="c_bg8" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#140d2b"/>
+        <stop offset="100%" stop-color="#2c1a52"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#c_bg8)" stroke="rgba(168,85,247,0.4)" stroke-width="2"/>
+    <circle cx="200" cy="80" r="32" fill="none" stroke="#a855f7" stroke-width="2.5"/>
+    <path d="M180 88 L195 72 L205 82 L220 68" fill="none" stroke="#a855f7" stroke-width="3"/>
+    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">MLOps Infrastructure &amp; Prometheus</text>
+    <text x="200" y="168" text-anchor="middle" fill="#c084fc" font-family="system-ui, sans-serif" font-size="13">Prometheus, Grafana, Docker &amp; CI/CD</text>
+    <text x="200" y="200" text-anchor="middle" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: MLOPS-PROM-102</text>
+  </svg>

@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
+import Patents from "./components/Patents/Patents";
+import Certifications from "./components/Certifications/Certifications";
+import Publications from "./components/Publications/Publications";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
 import {
@@ -37,6 +40,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
+          <Route path="/patents" element={<Patents />} />
+          <Route path="/publications" element={<Publications />} />
+          <Route path="/certifications" element={<Certifications />} />
           <Route path="/about" element={<About />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />

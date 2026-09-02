@@ -759,3 +759,51 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+/* ================================================== */
+/* Project Inspect Modal & Interactive Session Styles */
+/* ================================================== */
+.project-inspect-modal .modal-content {
+  background-color: #151128 !important;
+  border: 1px solid rgba(199, 112, 240, 0.45) !important;
+  box-shadow: 0 12px 35px rgba(119, 53, 136, 0.6) !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+.project-inspect-modal .modal-header {
+  border-bottom: 1px solid rgba(199, 112, 240, 0.25) !important;
+  background: rgba(26, 17, 48, 0.95) !important;
+}
+
+.project-inspect-modal .modal-footer {
+  border-top: 1px solid rgba(199, 112, 240, 0.25) !important;
+  background: rgba(26, 17, 48, 0.95) !important;
+}
+
+.project-inspect-modal .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%) !important;
+}
+
+.interactive-session-box {
+  background: rgba(18, 12, 36, 0.9) !important;
+  border: 1px solid rgba(199, 112, 240, 0.35) !important;
+  border-radius: 10px !important;
+  padding: 18px !important;
+  margin-top: 15px !important;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+.tech-pill {
+  display: inline-block;
+  background: rgba(199, 112, 240, 0.15) !important;
+  color: #c770f0 !important;
+  border: 1px solid rgba(199, 112, 240, 0.4) !important;
+  padding: 4px 10px !important;
+  border-radius: 12px !important;
+  font-size: 0.82rem !important;
+  margin: 4px 4px !important;
+  font-weight: 500 !important;
+}
+

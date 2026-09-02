@@ -4,11 +4,17 @@ import {
   SiTensorflow, 
   SiPytorch, 
   SiOpencv, 
-  SiFigma, 
   SiHtml5, 
   SiCss3, 
-  SiBootstrap 
+  SiFlask,
+  SiKubernetes,
+  SiAmazonaws,
+  SiFirebase,
+  SiScikitlearn,
+  SiVercel,
+  SiMysql
 } from "react-icons/si";
+import { BsRobot } from "react-icons/bs";
 
 import C from "../../Assets/TechIcons/C++.svg";
 import Javascript from "../../Assets/TechIcons/Javascript.svg";
@@ -39,29 +45,32 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <img src={Javascript} alt="javascript" />
-        <div className="tech-icons-text">Javascript</div>
+        <div className="tech-icons-text">JavaScript</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={SQL} alt="SQL" />
+        <div className="tech-icons-text">SQL / PostgreSQL</div>
       </Col>
 
-      {/* Web Development */}
+      {/* Web Development & Frameworks */}
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={ReactIcon} alt="react" />
+        <div className="tech-icons-text">React.js</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiFlask fontSize={"24px"} />
+        <div className="tech-icons-text">Flask / REST APIs</div>
+      </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiHtml5 fontSize={"24px"} />
         <div className="tech-icons-text">HTML5</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiCss3 fontSize={"24px"} />
-        <div className="tech-icons-text">CSS3</div>
+        <div className="tech-icons-text">CSS3 / Bootstrap</div>
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={ReactIcon} alt="react" />
-        <div className="tech-icons-text">React.js</div>
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiBootstrap fontSize={"24px"} />
-        <div className="tech-icons-text">Bootstrap</div>
-      </Col>
-      
 
-      {/* Machine Learning & AI */}
+      {/* Machine Learning, AI & LLMs */}
       <Col xs={4} md={2} className="tech-icons">
         <SiTensorflow fontSize={"24px"} />
         <div className="tech-icons-text">TensorFlow</div>
@@ -71,36 +80,56 @@ function Techstack() {
         <div className="tech-icons-text">PyTorch</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
+        <SiScikitlearn fontSize={"24px"} />
+        <div className="tech-icons-text">Scikit-Learn / SVM</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <BsRobot fontSize={"24px"} />
+        <div className="tech-icons-text">Hugging Face / LLMs</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
         <SiOpencv fontSize={"24px"} />
-        <div className="tech-icons-text">OpenCV</div>
+        <div className="tech-icons-text">OpenCV Vision</div>
       </Col>
 
-      {/* Databases */}
+      {/* Databases & Cloud */}
       <Col xs={4} md={2} className="tech-icons">
         <img src={Mongo} alt="mongoDb" />
         <div className="tech-icons-text">MongoDB</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <img src={SQL} alt="SQL" />
-        <div className="tech-icons-text">PostgreSQL / SQL</div>
+        <SiMysql fontSize={"24px"} />
+        <div className="tech-icons-text">MySQL</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiFirebase fontSize={"24px"} />
+        <div className="tech-icons-text">Firebase Firestore/Realtime</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiAmazonaws fontSize={"24px"} />
+        <div className="tech-icons-text">AWS (EC2, S3, Lambda)</div>
       </Col>
 
-      {/* Tools & Platforms */}
-      <Col xs={4} md={2} className="tech-icons">
-        <img src={Git} alt="git" />
-        <div className="tech-icons-text">Git</div>
-      </Col>
+      {/* DevOps & Infrastructure Tools */}
       <Col xs={4} md={2} className="tech-icons">
         <img src={Docker} alt="docker" />
         <div className="tech-icons-text">Docker</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <SiKubernetes fontSize={"24px"} />
+        <div className="tech-icons-text">Kubernetes</div>
+      </Col>
+      <Col xs={4} md={2} className="tech-icons">
+        <img src={Git} alt="git" />
+        <div className="tech-icons-text">Git / GitHub</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <img src={Postman} alt="Postman" />
         <div className="tech-icons-text">Postman</div>
       </Col>
       <Col xs={4} md={2} className="tech-icons">
-        <SiFigma fontSize={"24px"} />
-        <div className="tech-icons-text">Figma</div>
+        <SiVercel fontSize={"24px"} />
+        <div className="tech-icons-text">Vercel</div>
       </Col>
     </Row>
   );

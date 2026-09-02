@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_bm" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0a1829"/>
+        <stop offset="100%" stop-color="#162e4c"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_bm)" stroke="rgba(59,130,246,0.3)" stroke-width="2"/>
+    <!-- Retail Shopping Cart & Growth Chart -->
+    <path d="M150 70 L170 70 L185 120 L235 120 L250 85 L180 85" fill="none" stroke="#3b82f6" stroke-width="2.5"/>
+    <circle cx="190" cy="132" r="5" fill="#60a5fa"/>
+    <circle cx="230" cy="132" r="5" fill="#60a5fa"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Big Mart Sales Prediction (XGBoost)</text>
+    <text x="200" y="215" text-anchor="middle" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="12">KNNImputer • ERP Analytics • Scikit-Learn</text>
+  </svg>

@@ -49,6 +49,25 @@ function Home() {
       </Container>
       <Home2 />
 
+      {/* Featured Published Patents Section */}
+      <Container>
+        <Row style={{ paddingTop: "30px", paddingBottom: "30px" }}>
+          <Col md={12} style={{ textAlign: "center", color: "white" }}>
+            <h1 style={{ fontSize: "2.3em" }}>
+              PATENTS <span className="purple">PUBLISHED 📜</span>
+            </h1>
+            <p>
+              4 Granted &amp; Published Patents U/S 11A by the Indian Patent Office (IPO)
+            </p>
+            <div className="d-flex justify-content-center gap-3 flex-wrap mt-3">
+              <a href="/patents" className="btn btn-warning btn-lg" style={{ fontWeight: "bold" }}>
+                📜 Explore Published Patents &amp; Official Records
+              </a>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+
       <Container>
         <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
           <Col md={12} className="home-about-social">

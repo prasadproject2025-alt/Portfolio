@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_sl" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1e1b4b"/>
+        <stop offset="100%" stop-color="#312e81"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_sl)" stroke="rgba(251,191,36,0.3)" stroke-width="2"/>
+    <!-- Lightbulb & PIR LDR rays -->
+    <circle cx="200" cy="90" r="22" fill="#fbbf24" fill-opacity="0.9" stroke="#fef08a" stroke-width="2"/>
+    <path d="M190 112 L210 112 L205 125 L195 125 Z" fill="#94a3b8"/>
+    <line x1="200" y1="55" x2="200" y2="45" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="230" y1="65" x2="238" y2="58" stroke="#fbbf24" stroke-width="2"/>
+    <line x1="170" y1="65" x2="162" y2="58" stroke="#fbbf24" stroke-width="2"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Smart Classroom Lighting System</text>
+    <text x="200" y="215" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12">ESP8266 • PIR &amp; LDR Sensors • Blynk IoT Level 2</text>
+  </svg>

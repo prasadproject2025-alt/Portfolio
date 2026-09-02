@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="p_bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1b0c33"/>
+        <stop offset="100%" stop-color="#3b155e"/>
+      </linearGradient>
+      <linearGradient id="p_gold" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f59e0b"/>
+        <stop offset="100%" stop-color="#fbbf24"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#p_bg1)" stroke="rgba(245,158,11,0.4)" stroke-width="2"/>
+    <!-- Official Patent Ribbon Shield -->
+    <path d="M200 45 L235 65 L235 110 L200 135 L165 110 L165 65 Z" fill="rgba(245,158,11,0.15)" stroke="url(#p_gold)" stroke-width="2"/>
+    <circle cx="200" cy="85" r="14" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <path d="M193 85 L198 90 L208 80" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <rect x="188" y="105" width="24" height="20" rx="2" fill="#f59e0b"/>
+    <text x="200" y="180" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="bold">PATENT PUBLISHED #202641007487</text>
+    <text x="200" y="200" text-anchor="middle" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="12">Counterfactual Embedding Query Repair</text>
+    <text x="200" y="218" text-anchor="middle" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11">Field: Computer Science • Publ: 13/02/2026</text>
+  </svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_bio" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c1821"/>
+        <stop offset="100%" stop-color="#1e2a38"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_bio)" stroke="rgba(199,112,240,0.3)" stroke-width="2"/>
+    <!-- Hand contour with scanning beam -->
+    <path d="M175 140 L175 105 C175 98 182 98 182 105 L182 85 C182 78 190 78 190 85 L190 80 C190 73 198 73 198 80 L198 90 C198 83 206 83 206 90 L206 120 C216 120 225 128 225 138 L225 155 C225 165 215 170 195 170 C180 170 175 160 175 140 Z" 
+          fill="none" stroke="#00f5d4" stroke-width="2.5"/>
+    <!-- Laser beam -->
+    <line x1="140" y1="115" x2="260" y2="115" stroke="#c770f0" stroke-width="2" stroke-dasharray="4 2"/>
+    <circle cx="200" cy="140" r="10" fill="none" stroke="#ffd166" stroke-width="1.5"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">Contactless Hand Biometrics</text>
+    <text x="200" y="215" text-anchor="middle" fill="#00f5d4" font-family="system-ui, sans-serif" font-size="12">MobileNetV2 • AES Encryption • Payments</text>
+  </svg>

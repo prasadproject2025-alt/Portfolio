@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_ap" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1a1235"/>
+        <stop offset="100%" stop-color="#3b1d61"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_ap)" stroke="rgba(199,112,240,0.3)" stroke-width="2"/>
+    <!-- Pen / Wand / Transformer spark -->
+    <path d="M225 60 L240 75 L175 140 L160 140 L160 125 Z" fill="#ffd166" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="232" cy="67" r="18" fill="none" stroke="#c770f0" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <path d="M150 145 C170 135 180 155 205 145" fill="none" stroke="#c770f0" stroke-width="2"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="600">AutoPen: AI Writing Assistant</text>
+    <text x="200" y="215" text-anchor="middle" fill="#ffd166" font-family="system-ui, sans-serif" font-size="12">Transformer BART • RoBERTa • Tone Refinement</text>
+  </svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="c_bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#1f0a14"/>
+        <stop offset="100%" stop-color="#421327"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#c_bg7)" stroke="rgba(244,63,94,0.4)" stroke-width="2"/>
+    <circle cx="200" cy="80" r="32" fill="none" stroke="#f43f5e" stroke-width="2.5"/>
+    <polygon points="200,60 220,70 220,90 200,102 180,90 180,70" fill="#f43f5e" fill-opacity="0.8"/>
+    <text x="200" y="145" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="bold">Cybersecurity &amp; Cryptography (AES/RSA)</text>
+    <text x="200" y="168" text-anchor="middle" fill="#fb7185" font-family="system-ui, sans-serif" font-size="13">Symmetric/Asymmetric Encryption &amp; RBAC</text>
+    <text x="200" y="200" text-anchor="middle" fill="#fda4af" font-family="system-ui, sans-serif" font-size="11">VERIFIED CREDENTIAL • ID: CYBER-SEC-3321</text>
+  </svg>

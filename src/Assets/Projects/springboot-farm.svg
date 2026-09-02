@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+    <defs>
+      <linearGradient id="bg_sb" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0d1f12"/>
+        <stop offset="100%" stop-color="#1b4325"/>
+      </linearGradient>
+    </defs>
+    <rect width="400" height="240" rx="12" fill="url(#bg_sb)" stroke="rgba(52,211,153,0.3)" stroke-width="2"/>
+    <!-- Leaf & Spring Leaf symbol -->
+    <path d="M200 50 C230 65 245 95 235 125 C215 130 175 125 170 100 C165 75 185 55 200 50 Z" fill="#10b981" fill-opacity="0.8" stroke="#6ee7b7" stroke-width="2"/>
+    <circle cx="200" cy="95" r="45" fill="none" stroke="#6ee7b7" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="200" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="15" font-weight="600">Spring Boot Agro Expert Commerce</text>
+    <text x="200" y="215" text-anchor="middle" fill="#34d399" font-family="system-ui, sans-serif" font-size="12">Java 17 • Soil Analytics • PostgreSQL • OpenWeather</text>
+  </svg>
