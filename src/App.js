@@ -9,6 +9,7 @@ import Certifications from "./components/Certifications/Certifications";
 import Publications from "./components/Publications/Publications";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import FloatingTerminalBtn from "./components/Terminal/FloatingTerminalBtn";
 import {
   BrowserRouter as Router,
   Route,
@@ -47,6 +48,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
+        <FloatingTerminalBtn />
         <Footer />
       </div>
     </Router>

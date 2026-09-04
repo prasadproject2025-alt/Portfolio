@@ -1,8 +1,9 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useState, useMemo } from "react";
+import { Container, Row, Col, Button, Badge } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import ProjectModal from "./ProjectModal";
 import Particle from "../Particle";
+import { BsSearch, BsArrowRepeat } from "react-icons/bs";
 
 // Project visual assets
 import cropRagImg from "../../Assets/Projects/crop-rag.svg";
@@ -33,6 +34,7 @@ const projectsData = [
   {
     id: "nlp-adversarial",
     title: "Adversarial Attack and Defense Mechanisms for Robust NLP",
+    categoryGroup: "AI & LLMs",
     category: "AI & NLP Robustness",
     language: "Python",
     imgPath: nlpAdvImg,
@@ -52,6 +54,7 @@ const projectsData = [
   {
     id: "crop-rag",
     title: "Multilingual Crop Disease Assistant (Hybrid RAG)",
+    categoryGroup: "AI & LLMs",
     category: "Applied AI & RAG",
     language: "Python / Flask",
     imgPath: cropRagImg,
@@ -72,6 +75,7 @@ const projectsData = [
   {
     id: "springboot-farm",
     title: "Smart Farming Knowledge & Commerce Platform (Spring Boot)",
+    categoryGroup: "Full Stack Web",
     category: "Full Stack Enterprise",
     language: "Java / Spring Boot",
     imgPath: springBootFarmImg,
@@ -91,6 +95,7 @@ const projectsData = [
   {
     id: "noteshare",
     title: "NoteShare Academic Collaboration Platform",
+    categoryGroup: "Full Stack Web",
     category: "Full Stack Web",
     language: "PHP / JS",
     imgPath: noteShareImg,
@@ -111,6 +116,7 @@ const projectsData = [
   {
     id: "cloth-donation",
     title: "Sevaarth: NGO Resource & Cloth Donation App",
+    categoryGroup: "Full Stack Web",
     category: "Native Mobile (Android)",
     language: "Java / Android",
     imgPath: clothDonationImg,
@@ -130,6 +136,7 @@ const projectsData = [
   {
     id: "smart-pill",
     title: "Smart Automated Medication Assistant (Face AI & RFID)",
+    categoryGroup: "Security & IoT",
     category: "IoT & Healthcare",
     language: "C++ / Python",
     imgPath: smartPillImg,
@@ -149,6 +156,7 @@ const projectsData = [
   {
     id: "smart-lighting",
     title: "Smart Classroom Lighting System (IoT Level 2)",
+    categoryGroup: "Security & IoT",
     category: "IoT & Energy Systems",
     language: "C++ / Arduino",
     imgPath: smartLightingImg,
@@ -167,6 +175,7 @@ const projectsData = [
   {
     id: "potato-cloud",
     title: "Cloud-Based Smart Potato Disease Detection (AWS)",
+    categoryGroup: "Computer Vision",
     category: "Cloud Vision & AI",
     language: "Python / React",
     imgPath: potatoCloudImg,
@@ -185,6 +194,7 @@ const projectsData = [
   {
     id: "hand-biometrics",
     title: "Contactless Payment System Using Hand Biometrics",
+    categoryGroup: "Computer Vision",
     category: "Biometrics & FinTech",
     language: "Python / Streamlit",
     imgPath: handBioImg,
@@ -204,6 +214,7 @@ const projectsData = [
   {
     id: "mango-hybrid",
     title: "Hybrid Deep Learning Framework for Mango Leaf Disease",
+    categoryGroup: "Computer Vision",
     category: "Computer Vision",
     language: "Python / TensorFlow",
     imgPath: mangoHybridImg,
@@ -223,6 +234,7 @@ const projectsData = [
   {
     id: "secure-health-sftp",
     title: "Secure E-Person Healthcare System & SFTP Protocol",
+    categoryGroup: "Security & IoT",
     category: "Cybersecurity & Cryptography",
     language: "Python",
     imgPath: secureHealthImg,
@@ -242,6 +254,7 @@ const projectsData = [
   {
     id: "prometheus-mlops",
     title: "Prometheus MLOps Monitoring Infrastructure for AI Models",
+    categoryGroup: "Cloud & DevOps",
     category: "MLOps & System Observability",
     language: "Python / Prometheus",
     imgPath: prometheusMlopsImg,
@@ -261,6 +274,7 @@ const projectsData = [
   {
     id: "secure-record",
     title: "Comprehensive Secure Record Management System (AES)",
+    categoryGroup: "Security & IoT",
     category: "Cybersecurity & Systems",
     language: "PHP / MySQL",
     imgPath: codeEditorImg,
@@ -280,6 +294,7 @@ const projectsData = [
   {
     id: "plant-disease",
     title: "Plant Leaf Disease Prediction System (ML & Docker)",
+    categoryGroup: "Computer Vision",
     category: "Deep Learning & MLOps",
     language: "Python / Streamlit",
     imgPath: leafImg,
@@ -299,6 +314,7 @@ const projectsData = [
   {
     id: "bigmart-sales",
     title: "Big Mart Sales Prediction (XGBoost & KNNImputer)",
+    categoryGroup: "AI & LLMs",
     category: "Predictive Analytics & ERP",
     language: "Python / Scikit-Learn",
     imgPath: bigmartSalesImg,
@@ -318,6 +334,7 @@ const projectsData = [
   {
     id: "parkwise",
     title: "ParkWise: Smart Parking Platform (Firefly Algorithm)",
+    categoryGroup: "Full Stack Web",
     category: "Full Stack & Optimization",
     language: "React / Node.js",
     imgPath: parkwiseImg,
@@ -337,6 +354,7 @@ const projectsData = [
   {
     id: "yolo-midas",
     title: "YOLO + MiDaS Fusion for Autonomous Navigation",
+    categoryGroup: "Computer Vision",
     category: "Computer Vision",
     language: "Jupyter Notebook",
     imgPath: yoloMidasImg,
@@ -355,6 +373,7 @@ const projectsData = [
   {
     id: "uav-crowd",
     title: "Edge UAV Crowd Analytics (YOLOv8 & MiDaS)",
+    categoryGroup: "Computer Vision",
     category: "Edge Computing & Vision",
     language: "Python",
     imgPath: uavCrowdImg,
@@ -374,6 +393,7 @@ const projectsData = [
   {
     id: "autopen",
     title: "AutoPen: AI-Powered Creative Writing Assistant",
+    categoryGroup: "AI & LLMs",
     category: "Generative AI",
     language: "JavaScript / Python",
     imgPath: autoPenImg,
@@ -393,6 +413,7 @@ const projectsData = [
   {
     id: "ces-ai",
     title: "CES: Context-Repairing AI System",
+    categoryGroup: "AI & LLMs",
     category: "AI Research",
     language: "Python",
     imgPath: cesAiImg,
@@ -411,6 +432,7 @@ const projectsData = [
   {
     id: "inventory-res",
     title: "Allo Inventory Reservation System",
+    categoryGroup: "Full Stack Web",
     category: "Full Stack & Distributed Systems",
     language: "TypeScript",
     imgPath: inventoryResImg,
@@ -430,6 +452,7 @@ const projectsData = [
   {
     id: "flamai-audit",
     title: "FlamAI LLM Team Benchmark & Serving Audit",
+    categoryGroup: "Cloud & DevOps",
     category: "LLM Infrastructure",
     language: "Python",
     imgPath: flamAiImg,
@@ -449,34 +472,113 @@ const projectsData = [
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const categories = ["All", "AI & LLMs", "Computer Vision", "Full Stack Web", "Cloud & DevOps", "Security & IoT"];
+
+  const filteredProjects = useMemo(() => {
+    return projectsData.filter((project) => {
+      const matchesCategory = activeCategory === "All" || project.categoryGroup === activeCategory;
+      const q = searchQuery.toLowerCase().trim();
+      if (!q) return matchesCategory;
+
+      const matchesSearch =
+        project.title.toLowerCase().includes(q) ||
+        project.description.toLowerCase().includes(q) ||
+        project.language.toLowerCase().includes(q) ||
+        project.tags.some(tag => tag.toLowerCase().includes(q));
+
+      return matchesCategory && matchesSearch;
+    });
+  }, [searchQuery, activeCategory]);
 
   return (
     <Container fluid className="project-section">
       <Particle />
       <Container>
         <h1 className="project-heading">
-          My Recent <strong className="purple">Works </strong>
+          My Recent <strong className="purple">Works &amp; Systems 🚀</strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are the real-world projects, research implementations, and systems I've built.
+          Explore real-world software architectures, research implementations, and AI proofs-of-concept.
         </p>
 
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          {projectsData.map((project) => (
-            <Col key={project.id} md={4} className="project-card">
-              <ProjectCard
-                project={project}
-                imgPath={project.imgPath}
-                isBlog={false}
-                title={project.title}
-                description={project.description}
-                ghLink={project.ghLink}
-                demoLink={project.demoLink}
-                onInspect={(proj) => setSelectedProject(proj)}
-              />
-            </Col>
-          ))}
-        </Row>
+        {/* Live Search & Filter Bar */}
+        <div className="mb-4" style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div className="input-group mb-3" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.5)" }}>
+            <span className="input-group-text bg-dark border-secondary text-light">
+              <BsSearch />
+            </span>
+            <input
+              type="text"
+              className="form-control bg-dark text-white border-secondary"
+              placeholder="Search projects by name, technology (e.g. PyTorch, React, BERT, Spring Boot, Docker)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              style={{ fontSize: "0.95rem" }}
+            />
+            {searchQuery && (
+              <Button variant="outline-secondary" onClick={() => setSearchQuery("")}>
+                Clear
+              </Button>
+            )}
+          </div>
+
+          {/* Filter Category Tabs */}
+          <div className="d-flex justify-content-center gap-2 flex-wrap mb-2">
+            {categories.map((cat) => (
+              <Button
+                key={cat}
+                size="sm"
+                variant={activeCategory === cat ? "primary" : "outline-secondary"}
+                onClick={() => setActiveCategory(cat)}
+                style={{
+                  fontWeight: "600",
+                  borderRadius: "20px",
+                  padding: "5px 14px",
+                  fontSize: "0.85rem"
+                }}
+              >
+                {cat === "All" ? `All (${projectsData.length})` : cat}
+              </Button>
+            ))}
+          </div>
+
+          <div className="text-center mt-2">
+            <Badge bg="dark" style={{ border: "1px solid rgba(199, 112, 240, 0.4)", color: "#c770f0", fontSize: "0.82rem" }}>
+              Showing {filteredProjects.length} of {projectsData.length} Projects
+            </Badge>
+          </div>
+        </div>
+
+        {/* Projects Grid */}
+        {filteredProjects.length > 0 ? (
+          <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+            {filteredProjects.map((project) => (
+              <Col key={project.id} md={4} className="project-card">
+                <ProjectCard
+                  project={project}
+                  imgPath={project.imgPath}
+                  isBlog={false}
+                  title={project.title}
+                  description={project.description}
+                  ghLink={project.ghLink}
+                  demoLink={project.demoLink}
+                  onInspect={(proj) => setSelectedProject(proj)}
+                />
+              </Col>
+            ))}
+          </Row>
+        ) : (
+          <div className="text-center p-5 my-4" style={{ background: "rgba(22, 16, 42, 0.6)", borderRadius: "12px", border: "1px solid rgba(199, 112, 240, 0.3)" }}>
+            <h4 style={{ color: "#ffffff" }}>No matching projects found</h4>
+            <p style={{ color: "#a8a29e" }}>Try a different search keyword or reset your filter.</p>
+            <Button variant="primary" onClick={() => { setSearchQuery(""); setActiveCategory("All"); }}>
+              <BsArrowRepeat /> Reset Search &amp; Filters
+            </Button>
+          </div>
+        )}
       </Container>
 
       {/* Interactive Inspect Modal Session */}
